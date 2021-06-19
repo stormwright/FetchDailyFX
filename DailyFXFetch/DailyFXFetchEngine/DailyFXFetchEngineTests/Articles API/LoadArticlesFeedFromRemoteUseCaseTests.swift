@@ -21,10 +21,20 @@ protocol MarketsLoader {
 
 class RemoteArticlesLoader: ArticlesLoader {
     
+    private let url: URL
+    private let client: HTTPClientForArticles
+    
+    init(url: URL, client: HTTPClientForArticles) {
+        self.url = url
+        self.client = client
+    }
+    
     typealias LoadResult = ArticlesLoader.Result
     
     func load(completion: @escaping (LoadResult) -> Void) {
-        
+        client.get(from: url) { (result) in
+            
+        }
     }
     
 }
@@ -55,7 +65,7 @@ class HTTPClientForArticlesSpy: HTTPClientForArticles {
     }
     
     func get(from url: URL, completion: @escaping (HTTPClientForArticles.Result) -> Void) -> HTTPClientTask {
-        
+        messages.append((url, completion))
         return Task { [weak self] in
             self?.cancelledURLs.append(url)
         }
@@ -70,11 +80,20 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
+    func test_load_requestsDataFromURL() {
+        let url = URL(string: "https://any-url.com")!
+        let (sut, client) = makeSUT(url: url)
+        
+        sut.load { _ in }
+        
+        XCTAssertEqual(client.requestedURLs, [url])
+    }
+    
     // MARK: Helpers
     
     func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientForArticlesSpy) {
         let client = HTTPClientForArticlesSpy()
-        let sut = RemoteArticlesLoader()
+        let sut = RemoteArticlesLoader(url: url, client: client)
         return (sut, client)
     }
 }
