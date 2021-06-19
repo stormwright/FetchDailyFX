@@ -24,6 +24,11 @@ class RemoteArticlesLoader: ArticlesLoader {
     private let url: URL
     private let client: HTTPClientForArticles
     
+    enum Error: Swift.Error {
+        case connectivity
+        case invalidData
+    }
+    
     init(url: URL, client: HTTPClientForArticles) {
         self.url = url
         self.client = client
@@ -33,7 +38,12 @@ class RemoteArticlesLoader: ArticlesLoader {
     
     func load(completion: @escaping (LoadResult) -> Void) {
         client.get(from: url) { (result) in
-            
+            switch result {
+            case .failure:
+                completion(.failure(Error.connectivity))
+            case .success:
+                break                
+            }
         }
     }
     
@@ -70,6 +80,11 @@ class HTTPClientForArticlesSpy: HTTPClientForArticles {
             self?.cancelledURLs.append(url)
         }
     }
+    
+    func complete(with error: Error, at index: Int = 0) {
+        messages[index].completion(.failure(error))
+    }
+    
 }
 
 class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
@@ -99,11 +114,47 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
+    func test_load_deliversErrorOnClientError() {
+        let (sut, client) = makeSUT()
+        
+        expect(sut, toCompleteWith: failure(.connectivity), when: {
+            let clientError = NSError(domain: "Test", code: 0)
+            client.complete(with: clientError)
+        })
+    }
+    
     // MARK: Helpers
     
     func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientForArticlesSpy) {
         let client = HTTPClientForArticlesSpy()
         let sut = RemoteArticlesLoader(url: url, client: client)
         return (sut, client)
+    }
+    
+    private func failure(_ error: RemoteArticlesLoader.Error) -> RemoteArticlesLoader.LoadResult {
+        return .failure(error)
+    }
+    
+    private func expect(_ sut: RemoteArticlesLoader, toCompleteWith expectedResult: RemoteArticlesLoader.LoadResult, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+        let exp = expectation(description: "Wait for load completion")
+        
+        sut.load { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(expectedItems)):
+                XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
+                
+            case let (.failure(receivedError as RemoteArticlesLoader.Error), .failure(expectedError as RemoteArticlesLoader.Error)):
+                XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+                
+            default:
+                XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+            }
+            
+            exp.fulfill()
+        }
+        
+        action()
+        
+        wait(for: [exp], timeout: 1.0)
     }
 }
