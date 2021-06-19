@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B0A5C34267E921E00B88C92 /* DailyFXFetchEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A5C2A267E921E00B88C92 /* DailyFXFetchEngine.framework */; };
+		1B0A5C64267E9AA700B88C92 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C63267E9AA700B88C92 /* Article.swift */; };
+		1B0A5C68267E9AD000B88C92 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C67267E9AD000B88C92 /* Market.swift */; };
+		1B0A5C6C267E9AEE00B88C92 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C6B267E9AEE00B88C92 /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,9 @@
 		1B0A5C2E267E921E00B88C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B0A5C33267E921E00B88C92 /* DailyFXFetchEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyFXFetchEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0A5C3A267E921E00B88C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B0A5C63267E9AA700B88C92 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		1B0A5C67267E9AD000B88C92 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		1B0A5C6B267E9AEE00B88C92 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		1B0A5C2C267E921E00B88C92 /* DailyFXFetchEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A5C56267E98C300B88C92 /* Models */,
 				1B0A5C2E267E921E00B88C92 /* Info.plist */,
 			);
 			path = DailyFXFetchEngine;
@@ -78,6 +85,16 @@
 				1B0A5C3A267E921E00B88C92 /* Info.plist */,
 			);
 			path = DailyFXFetchEngineTests;
+			sourceTree = "<group>";
+		};
+		1B0A5C56267E98C300B88C92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B0A5C63267E9AA700B88C92 /* Article.swift */,
+				1B0A5C67267E9AD000B88C92 /* Market.swift */,
+				1B0A5C6B267E9AEE00B88C92 /* Author.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +157,7 @@
 				TargetAttributes = {
 					1B0A5C29267E921E00B88C92 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					1B0A5C32267E921E00B88C92 = {
 						CreatedOnToolsVersion = 12.4;
@@ -187,6 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A5C6C267E9AEE00B88C92 /* Author.swift in Sources */,
+				1B0A5C64267E9AA700B88C92 /* Article.swift in Sources */,
+				1B0A5C68267E9AD000B88C92 /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +356,7 @@
 		1B0A5C3F267E921E00B88C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZXQJ5A6QWW;
@@ -354,6 +376,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,6 +385,7 @@
 		1B0A5C40267E921E00B88C92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZXQJ5A6QWW;
@@ -389,6 +413,7 @@
 		1B0A5C42267E921E00B88C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXQJ5A6QWW;
 				INFOPLIST_FILE = DailyFXFetchEngineTests/Info.plist;
@@ -407,6 +432,7 @@
 		1B0A5C43267E921E00B88C92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXQJ5A6QWW;
 				INFOPLIST_FILE = DailyFXFetchEngineTests/Info.plist;
