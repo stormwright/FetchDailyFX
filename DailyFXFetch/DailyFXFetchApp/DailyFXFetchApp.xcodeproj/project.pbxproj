@@ -88,7 +88,6 @@
 		1B0A5D14267FC09500B88C92 = {
 			isa = PBXGroup;
 			children = (
-				1B0A5D40267FCCC400B88C92 /* Presentation Module */,
 				1B0A5D1F267FC09500B88C92 /* DailyFXFetchApp */,
 				1B0A5D1E267FC09500B88C92 /* Products */,
 				1B0A5D5A267FD65800B88C92 /* Frameworks */,
@@ -106,6 +105,7 @@
 		1B0A5D1F267FC09500B88C92 /* DailyFXFetchApp */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A5D40267FCCC400B88C92 /* Presentation Module */,
 				1B0A5D20267FC09500B88C92 /* AppDelegate.swift */,
 				1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */,
 				1B0A5D29267FC09700B88C92 /* Assets.xcassets */,
@@ -127,6 +127,7 @@
 		1B0A5D41267FCD0500B88C92 /* Articles Module */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A5D8F268004BE00B88C92 /* Routing */,
 				1B0A5D43267FCD3E00B88C92 /* Articles UI */,
 				1B0A5D42267FCD2800B88C92 /* ViewModels */,
 			);
@@ -233,6 +234,13 @@
 				1B0A5D81267FFDAA00B88C92 /* ArticleCellViewModel.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1B0A5D8F268004BE00B88C92 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
