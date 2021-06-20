@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct Market: Hashable {
+public struct Market: Hashable {
     let displayName: String
     let marketId: String
 }

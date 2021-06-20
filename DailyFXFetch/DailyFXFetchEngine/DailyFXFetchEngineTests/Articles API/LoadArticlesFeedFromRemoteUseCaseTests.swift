@@ -5,13 +5,7 @@
 //
 
 import XCTest
-@testable import DailyFXFetchEngine
-
-protocol ArticlesLoader {
-    typealias Result = Swift.Result<[Article], Error>
-    
-    func load(completion: @escaping (Result) -> Void)
-}
+import DailyFXFetchEngine
 
 protocol MarketsLoader {
     typealias Result = Swift.Result<[Market], Error>
