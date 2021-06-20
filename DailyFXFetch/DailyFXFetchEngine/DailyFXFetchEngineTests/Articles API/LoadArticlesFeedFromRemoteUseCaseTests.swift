@@ -341,7 +341,6 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
             "technicalAnalysis": technicalAnalysis,
             "specialReport": technicalAnalysis
         ]
-        print(json)
         return try! JSONSerialization.data(withJSONObject: json)
     }
     
@@ -366,13 +365,5 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         action()
         
         wait(for: [exp], timeout: 1.0)
-    }
-}
-
-extension XCTestCase {
-    func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
-        }
     }
 }
