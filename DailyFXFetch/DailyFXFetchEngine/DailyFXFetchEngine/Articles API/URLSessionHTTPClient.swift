@@ -1,12 +1,12 @@
 //
-// URLSessionHTTPClientForArticles.swift
+// URLSessionHTTPClient.swift
 // Created by Mikayil M on 20/06/2021
 // 
 //
 
 import Foundation
 
-public final class URLSessionHTTPClientForArticles: HTTPClient {
+public final class URLSessionHTTPClient: HTTPClient {
     
     private let session: URLSession
     

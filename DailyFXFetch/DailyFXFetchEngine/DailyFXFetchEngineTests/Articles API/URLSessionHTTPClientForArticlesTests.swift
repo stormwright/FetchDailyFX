@@ -85,7 +85,7 @@ class URLSessionHTTPClientForArticlesTests: XCTestCase {
         configuration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: configuration)
         
-        let sut = URLSessionHTTPClientForArticles(session: session)
+        let sut = URLSessionHTTPClient(session: session)
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
