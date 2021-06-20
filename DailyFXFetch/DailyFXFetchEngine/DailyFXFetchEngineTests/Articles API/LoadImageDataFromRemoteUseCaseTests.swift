@@ -100,7 +100,7 @@ class LoadImageDataFromRemoteUseCaseTests: XCTestCase {
     }
     
     func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-        let client = HTTPClientForArticlesSpy()
+        let client = HTTPClientSpy()
         var sut: RemoteImageDataLoader? = RemoteImageDataLoader(client: client)
         
         var capturedResults = [ImageDataLoader.Result]()
@@ -114,8 +114,8 @@ class LoadImageDataFromRemoteUseCaseTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteImageDataLoader, client: HTTPClientForArticlesSpy) {
-        let client = HTTPClientForArticlesSpy()
+    private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteImageDataLoader, client: HTTPClientSpy) {
+        let client = HTTPClientSpy()
         let sut = RemoteImageDataLoader(client: client)
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(client, file: file, line: line)

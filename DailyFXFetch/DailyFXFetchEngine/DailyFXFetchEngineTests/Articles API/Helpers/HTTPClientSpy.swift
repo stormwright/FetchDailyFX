@@ -1,5 +1,5 @@
 //
-// HTTPClientForArticlesSpy.swift
+// HTTPClientSpy.swift
 // Created by Mikayil M on 20/06/2021
 // 
 //
@@ -7,7 +7,7 @@
 import Foundation
 import DailyFXFetchEngine
 
-class HTTPClientForArticlesSpy: HTTPClient {
+class HTTPClientSpy: HTTPClient {
     
     private struct Task: HTTPClientTask {
         let callback: () -> Void

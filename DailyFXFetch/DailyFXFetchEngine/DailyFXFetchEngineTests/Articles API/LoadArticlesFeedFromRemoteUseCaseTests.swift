@@ -113,7 +113,7 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
         let url = URL(string: "http://any-url.com")!
-        let client = HTTPClientForArticlesSpy()
+        let client = HTTPClientSpy()
         var sut: RemoteArticlesLoader? = RemoteArticlesLoader(url: url, client: client)
         
         var capturedResults = [RemoteArticlesLoader.Result]()
@@ -127,8 +127,8 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
     
     // MARK: Helpers
     
-    func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientForArticlesSpy) {
-        let client = HTTPClientForArticlesSpy()
+    func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientSpy) {
+        let client = HTTPClientSpy()
         let sut = RemoteArticlesLoader(url: url, client: client)
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
