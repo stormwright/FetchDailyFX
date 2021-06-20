@@ -26,6 +26,7 @@
 		1B0A5CCF267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift */; };
 		1B0A5CD3267FA12400B88C92 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CD2267FA12400B88C92 /* URLProtocolStub.swift */; };
 		1B0A5CD9267FA5BC00B88C92 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CD8267FA5BC00B88C92 /* SharedTestHelpers.swift */; };
+		1B0A5CE0267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientForArticlesTests.swift; sourceTree = "<group>"; };
 		1B0A5CD2267FA12400B88C92 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		1B0A5CD8267FA5BC00B88C92 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientForArticles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				1B0A5CA9267F63BB00B88C92 /* RemoteArticlesLoader.swift */,
 				1B0A5CB3267F641800B88C92 /* ArticlesMapper.swift */,
 				1B0A5CAF267F63F100B88C92 /* HTTPClientForArticles.swift */,
+				1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */,
 			);
 			path = "Articles API";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				1B0A5C6C267E9AEE00B88C92 /* Author.swift in Sources */,
 				1B0A5CC1267F645600B88C92 /* RemoteAuthor.swift in Sources */,
+				1B0A5CE0267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift in Sources */,
 				1B0A5CB4267F641800B88C92 /* ArticlesMapper.swift in Sources */,
 				1B0A5CBB267F644000B88C92 /* RemoteArticle.swift in Sources */,
 				1B0A5C98267F629600B88C92 /* ArticlesLoader.swift in Sources */,
