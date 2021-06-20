@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import DailyFXFetchEngine
 
 final class ArticleCellController {
     
@@ -19,6 +20,10 @@ final class ArticleCellController {
         let cell = bound(tableView.dequeueReusableCell())
         viewModel.loadImageData()
         return cell
+    }
+    
+    func loadModel() -> Article {
+        return viewModel.article
     }
     
     func preload() {

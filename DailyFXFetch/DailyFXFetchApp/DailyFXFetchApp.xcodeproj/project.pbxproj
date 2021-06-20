@@ -30,6 +30,9 @@
 		1B0A5D862680015B00B88C92 /* ArticlesDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D852680015B00B88C92 /* ArticlesDashboardViewController.swift */; };
 		1B0A5D882680024C00B88C92 /* ArticlesDashboardUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D872680024C00B88C92 /* ArticlesDashboardUIComposer.swift */; };
 		1B0A5D8A268002B400B88C92 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D89268002B400B88C92 /* MainQueueDispatchDecorator.swift */; };
+		1B0A5D912680071500B88C92 /* ArticlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D902680071500B88C92 /* ArticlesRouter.swift */; };
+		1B0A5D932680073300B88C92 /* ArticlesViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D922680073300B88C92 /* ArticlesViewControllerFactory.swift */; };
+		1B0A5D952680082B00B88C92 /* AppViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D942680082B00B88C92 /* AppViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +74,9 @@
 		1B0A5D852680015B00B88C92 /* ArticlesDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDashboardViewController.swift; sourceTree = "<group>"; };
 		1B0A5D872680024C00B88C92 /* ArticlesDashboardUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDashboardUIComposer.swift; sourceTree = "<group>"; };
 		1B0A5D89268002B400B88C92 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		1B0A5D902680071500B88C92 /* ArticlesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRouter.swift; sourceTree = "<group>"; };
+		1B0A5D922680073300B88C92 /* ArticlesViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewControllerFactory.swift; sourceTree = "<group>"; };
+		1B0A5D942680082B00B88C92 /* AppViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 				1B0A5D40267FCCC400B88C92 /* Presentation Module */,
 				1B0A5D20267FC09500B88C92 /* AppDelegate.swift */,
 				1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */,
+				1B0A5D942680082B00B88C92 /* AppViewControllerFactory.swift */,
 				1B0A5D29267FC09700B88C92 /* Assets.xcassets */,
 				1B0A5D2B267FC09700B88C92 /* LaunchScreen.storyboard */,
 				1B0A5D2E267FC09700B88C92 /* Info.plist */,
@@ -239,6 +246,8 @@
 		1B0A5D8F268004BE00B88C92 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A5D902680071500B88C92 /* ArticlesRouter.swift */,
+				1B0A5D922680073300B88C92 /* ArticlesViewControllerFactory.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -319,10 +328,13 @@
 				1B0A5D84267FFDDF00B88C92 /* ArticleCellController.swift in Sources */,
 				1B0A5D80267FFD6500B88C92 /* ArticlesDashboardViewModel.swift in Sources */,
 				1B0A5D50267FD31C00B88C92 /* ArticleDetailView.swift in Sources */,
+				1B0A5D912680071500B88C92 /* ArticlesRouter.swift in Sources */,
+				1B0A5D932680073300B88C92 /* ArticlesViewControllerFactory.swift in Sources */,
 				1B0A5D882680024C00B88C92 /* ArticlesDashboardUIComposer.swift in Sources */,
 				1B0A5D63267FDA0D00B88C92 /* UIImageView+Animations.swift in Sources */,
 				1B0A5D8A268002B400B88C92 /* MainQueueDispatchDecorator.swift in Sources */,
 				1B0A5D53267FD55200B88C92 /* AuthorCellController.swift in Sources */,
+				1B0A5D952680082B00B88C92 /* AppViewControllerFactory.swift in Sources */,
 				1B0A5D4D267FD1D000B88C92 /* AuthorCell.swift in Sources */,
 				1B0A5D57267FD5A300B88C92 /* AuthorCellViewModel.swift in Sources */,
 				1B0A5D82267FFDAA00B88C92 /* ArticleCellViewModel.swift in Sources */,

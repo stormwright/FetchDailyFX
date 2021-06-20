@@ -13,6 +13,8 @@ class ArticlesDashboardViewController: UITableViewController, UITableViewDataSou
     var tableModel = [ArticleCellController]() {
         didSet { tableView.reloadData() }
     }
+    
+    var router: ArticlesRouter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,11 @@ class ArticlesDashboardViewController: UITableViewController, UITableViewDataSou
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelCellControllerLoad(forRowAt: indexPath)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = cellController(forRowAt: indexPath).loadModel()
+        router?.route(to: .detailView(article: model))
     }
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {

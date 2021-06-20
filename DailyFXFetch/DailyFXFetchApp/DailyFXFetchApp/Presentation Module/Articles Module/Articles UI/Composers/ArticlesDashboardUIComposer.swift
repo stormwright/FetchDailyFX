@@ -10,12 +10,12 @@ import DailyFXFetchEngine
 final class ArticlesDashboardUIComposer {
     private init() {}
     
-    static func dashboardComposedWith(articlesLoader: ArticlesLoader, imageLoader: ImageDataLoader) -> ArticlesDashboardViewController {
+    static func dashboardComposedWith(articlesLoader: ArticlesLoader, imageLoader: ImageDataLoader, router: ArticlesRouter) -> ArticlesDashboardViewController {
         let articlesViewModel = ArticlesDashboardViewModel(
             articlesLoader: MainQueueDispatchDecorator(decoratee: articlesLoader))
 
         let controller = ArticlesDashboardViewController.makeWith(
-            viewModel: articlesViewModel)
+            viewModel: articlesViewModel, router: router)
         articlesViewModel.onArticlesLoad = adaptArticlesToCellControllers(
             forwardingTo: controller,
             imageLoader: MainQueueDispatchDecorator(decoratee: imageLoader))
@@ -34,11 +34,12 @@ final class ArticlesDashboardUIComposer {
 }
 
 private extension ArticlesDashboardViewController {
-    static func makeWith(viewModel: ArticlesDashboardViewModel) -> ArticlesDashboardViewController {
+    static func makeWith(viewModel: ArticlesDashboardViewModel, router: ArticlesRouter) -> ArticlesDashboardViewController {
         let bundle = Bundle(for: ArticlesDashboardViewController.self)
         let storyboard = UIStoryboard(name: "ArticlesDashboard", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! ArticlesDashboardViewController
         controller.viewModel = viewModel
+        controller.router = router
         controller.title = viewModel.title
         return controller
     }
