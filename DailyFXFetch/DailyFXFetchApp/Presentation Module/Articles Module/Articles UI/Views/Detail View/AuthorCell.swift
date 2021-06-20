@@ -8,9 +8,9 @@ import UIKit
 
 final class AuthorCell: UITableViewCell {
     
-    @IBOutlet private(set) public var name: UILabel!
-    @IBOutlet private(set) public var title: UILabel!
-    @IBOutlet private(set) public var descriptionShort: UILabel!
-    @IBOutlet private(set) public var photo: UIImageView!
+    @IBOutlet private(set) var name: UILabel!
+    @IBOutlet private(set) var title: UILabel!
+    @IBOutlet private(set) var descriptionShort: UILabel!
+    @IBOutlet private(set) var photo: UIImageView!
 
 }
