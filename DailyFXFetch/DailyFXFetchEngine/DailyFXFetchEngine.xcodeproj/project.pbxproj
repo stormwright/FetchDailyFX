@@ -29,6 +29,7 @@
 		1B0A5CE0267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */; };
 		1B0A5CE6267FA7F800B88C92 /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CE5267FA7F800B88C92 /* ImageDataLoader.swift */; };
 		1B0A5CEA267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */; };
+		1B0A5CEE267FB33300B88C92 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientForArticles.swift; sourceTree = "<group>"; };
 		1B0A5CE5267FA7F800B88C92 /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 		1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
+		1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				1B0A5CB3267F641800B88C92 /* ArticlesMapper.swift */,
 				1B0A5CAF267F63F100B88C92 /* HTTPClientForArticles.swift */,
 				1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClientForArticles.swift */,
+				1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */,
 			);
 			path = "Articles API";
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				1B0A5CB0267F63F100B88C92 /* HTTPClientForArticles.swift in Sources */,
 				1B0A5C64267E9AA700B88C92 /* Article.swift in Sources */,
 				1B0A5CAA267F63BB00B88C92 /* RemoteArticlesLoader.swift in Sources */,
+				1B0A5CEE267FB33300B88C92 /* RemoteImageDataLoader.swift in Sources */,
 				1B0A5C68267E9AD000B88C92 /* Market.swift in Sources */,
 				1B0A5CC5267F648800B88C92 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				1B0A5CA5267F636500B88C92 /* Int+Date.swift in Sources */,
