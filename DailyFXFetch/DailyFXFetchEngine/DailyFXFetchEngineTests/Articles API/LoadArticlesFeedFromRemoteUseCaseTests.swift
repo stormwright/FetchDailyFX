@@ -232,6 +232,15 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         })
     }
     
+    func test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() {
+        let (sut, client) = makeSUT()
+
+        expect(sut, toCompleteWith: .success([]), when: {
+            let emptyListJSON = makeArticlesJSON([], [], [], [])
+            client.complete(withStatusCode: 200, data: emptyListJSON)
+        })
+    }
+    
     // MARK: Helpers
     
     func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientForArticlesSpy) {
