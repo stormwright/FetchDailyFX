@@ -94,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5C63267E9AA700B88C92 /* Article.swift */,
-				1B0A5C67267E9AD000B88C92 /* Market.swift */,
 				1B0A5C6B267E9AEE00B88C92 /* Author.swift */,
+				1B0A5C67267E9AD000B88C92 /* Market.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -6,10 +6,18 @@
 
 import Foundation
 
-struct Article: Hashable {
-    let title: String
-    let description: String
-    let headlineImageUrl: URL
-    let authors: [Author]
-    let displayTimestamp: Date
+public struct Article: Hashable {
+    public let title: String
+    public let description: String
+    public let headlineImageUrl: URL?
+    public let authors: [Author]
+    public let displayTimestamp: Date
+    
+    public init(title: String, description: String, headlineImageUrl: URL?, authors: [Author], displayTimestamp: Date) {
+        self.title = title
+        self.description = description
+        self.headlineImageUrl = headlineImageUrl
+        self.authors = authors
+        self.displayTimestamp = displayTimestamp
+    }
 }
