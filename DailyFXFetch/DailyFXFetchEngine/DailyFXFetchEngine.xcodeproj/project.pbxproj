@@ -30,6 +30,7 @@
 		1B0A5CE6267FA7F800B88C92 /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CE5267FA7F800B88C92 /* ImageDataLoader.swift */; };
 		1B0A5CEA267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */; };
 		1B0A5CEE267FB33300B88C92 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */; };
+		1B0A5D01267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D00267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		1B0A5CE5267FA7F800B88C92 /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 		1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
+		1B0A5D00267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMarketsFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				1B0A5C70267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift */,
 				1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientTests.swift */,
 				1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */,
+				1B0A5D00267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift */,
 			);
 			path = "DailyFX API";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				1B0A5CD9267FA5BC00B88C92 /* SharedTestHelpers.swift in Sources */,
 				1B0A5CC9267F650300B88C92 /* HTTPClientSpy.swift in Sources */,
 				1B0A5CEA267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift in Sources */,
+				1B0A5D01267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift in Sources */,
 				1B0A5C91267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				1B0A5CD3267FA12400B88C92 /* URLProtocolStub.swift in Sources */,
 			);

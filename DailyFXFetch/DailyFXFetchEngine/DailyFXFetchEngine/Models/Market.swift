@@ -7,6 +7,11 @@
 import Foundation
 
 public struct Market: Hashable {
-    let displayName: String
-    let marketId: String
+    public let displayName: String
+    public let marketId: String
+    
+    public init(displayName: String, marketId: String) {
+        self.displayName = displayName
+        self.marketId = marketId
+    }
 }
