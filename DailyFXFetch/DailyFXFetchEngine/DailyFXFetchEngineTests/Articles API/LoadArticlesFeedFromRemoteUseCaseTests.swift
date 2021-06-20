@@ -37,7 +37,9 @@ class RemoteArticlesLoader: ArticlesLoader {
     typealias LoadResult = ArticlesLoader.Result
     
     func load(completion: @escaping (LoadResult) -> Void) {
-        client.get(from: url) { (result) in
+        client.get(from: url) { [weak self] (result) in
+            guard self != nil else { return }
+            
             switch result {
             case .failure:
                 completion(.failure(Error.connectivity))
@@ -278,11 +280,27 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         })
     }
     
+    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let url = URL(string: "http://any-url.com")!
+        let client = HTTPClientForArticlesSpy()
+        var sut: RemoteArticlesLoader? = RemoteArticlesLoader(url: url, client: client)
+        
+        var capturedResults = [RemoteArticlesLoader.Result]()
+        sut?.load { capturedResults.append($0) }
+
+        sut = nil
+        client.complete(withStatusCode: 200, data: makeArticlesJSON([], [], [], []))
+        
+        XCTAssertTrue(capturedResults.isEmpty)
+    }
+    
     // MARK: Helpers
     
     func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteArticlesLoader, client: HTTPClientForArticlesSpy) {
         let client = HTTPClientForArticlesSpy()
         let sut = RemoteArticlesLoader(url: url, client: client)
+        trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, client)
     }
     
@@ -348,5 +366,13 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         action()
         
         wait(for: [exp], timeout: 1.0)
+    }
+}
+
+extension XCTestCase {
+    func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+        }
     }
 }
