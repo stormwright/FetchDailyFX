@@ -72,6 +72,14 @@ class URLSessionHTTPClientForArticlesTests: XCTestCase {
         XCTAssertEqual(receivedError?.code, URLError.cancelled.rawValue)
     }
     
+    func test_getFromURL_failsOnRequestError() {
+        let requestError = anyNSError()
+        
+        let receivedError = resultErrorFor((data: nil, response: nil, error: requestError))
+        
+        XCTAssertEqual(receivedError as NSError?, requestError)
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> HTTPClientForArticles {
@@ -116,4 +124,8 @@ class URLSessionHTTPClientForArticlesTests: XCTestCase {
 
 func anyURL() -> URL {
     return URL(string: "http://any-url.com")!
+}
+
+func anyNSError() -> NSError {
+    return NSError(domain: "any error", code: 0)
 }
