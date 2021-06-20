@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="303" width="414" height="515"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="173" id="58p-uo-Nk5">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AuthorCell" rowHeight="173" id="58p-uo-Nk5" customClass="AuthorCell" customModule="DailyFXFetchApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="173"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="58p-uo-Nk5" id="lar-A2-LGl">
@@ -89,6 +89,12 @@
                                                         <constraint firstAttribute="trailingMargin" secondItem="EWd-fW-Gmv" secondAttribute="trailing" constant="10" id="vhN-71-6zo"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="descriptionShort" destination="aZH-U3-ZZO" id="wz7-iu-DzP"/>
+                                                    <outlet property="name" destination="EWd-fW-Gmv" id="gDk-bw-Pme"/>
+                                                    <outlet property="photo" destination="3yo-qa-z3e" id="7Aj-FA-r7v"/>
+                                                    <outlet property="title" destination="gWv-h8-KYT" id="cvo-kF-oiC"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
