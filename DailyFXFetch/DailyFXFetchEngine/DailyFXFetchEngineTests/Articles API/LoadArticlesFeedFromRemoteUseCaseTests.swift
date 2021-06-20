@@ -232,12 +232,49 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         })
     }
     
-    func test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() {
+    func test_load_deliversNoArticlesOn200HTTPResponseWithEmptyJSONList() {
         let (sut, client) = makeSUT()
 
         expect(sut, toCompleteWith: .success([]), when: {
             let emptyListJSON = makeArticlesJSON([], [], [], [])
             client.complete(withStatusCode: 200, data: emptyListJSON)
+        })
+    }
+    
+    func test_load_deliversArticlesOn200HTTPResponseWithJSONItems() {
+        let (sut, client) = makeSUT()
+        
+        let author1 = Author(
+            name: "Diego Colman",
+            title: "Market Analyst",
+            descriptionShort: "En DailyFX Desde: 2016. Experiencia: 5 a&#241;os operando con forex, 7 a&#241;os invirtiendo en activos de bolsa. Ha trabajado como economista de Am&#233;rica Latina, cubriendo pa&#237;ses como M&#233;xico, Argentina, Chile, Colombia y Brasil. Previamente, se ha desempe&#241;ado como analista de investigaci&#243;n de banca de inversiones",
+            photo: URL(string: "https://a.c-dn.net/b/2WOWkt/Diego_Colman.png"))
+        
+        let article1 = makeArticle(
+            title: "Crude Oil Price Forecast: Bullish Scenario Remains Intact amid Strengthening Demand",
+            description: "Although the Fed hawkish bias has caused some reflationary position unwinding and anxiety about the outlook for commodities, the fundamental picture for oil has not changed and remains bullish.",
+            headlineImageUrl: URL(string: "https://a.c-dn.net/b/2iX0wt/headline_OIL_PUMP_01.JPG")!,
+            authors: [author1],
+            displayTimestamp: 1624114800000.date)
+        
+        let author2 = Author(
+            name: "Christopher Vecchio, CFA",
+            title: "Senior Strategist",
+            descriptionShort: "At DailyFX Since: 2008. Experience: Started trading in equities in 2004 and FX in 2008. Has worked with DailyFX since attending college in 2008 starting with an internship. Has consulted multi-national firms on FX hedging and has lectured at Duke Law School on FX derivatives trading.",
+            photo: URL(string: "https://a.c-dn.net/b/2SwDd5/Christopher_Vecchio.png"))
+        
+        let article2 = makeArticle(
+            title: "Euro Technical Analysis: Losing Steam Ahead of FOMC - Levels for EUR/GBP, EUR/JPY, EUR/USD",
+            description: "The Euro has not made much progress in June and may be nearing a short-term inflection point as a result.",
+            headlineImageUrl: URL(string: "https://a.c-dn.net/b/2OIPnn/headline_EU_FLAG.JPG")!,
+            authors: [author2],
+            displayTimestamp: 1623681900000.date)
+        
+        let articles = [article1.model, article2.model]
+        
+        expect(sut, toCompleteWith: .success(articles), when: {
+            let json = makeArticlesJSON([], [article1.json], [article2.json], [])
+            client.complete(withStatusCode: 200, data: json)
         })
     }
     
@@ -253,14 +290,40 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         return .failure(error)
     }
     
+    private func makeArticle(title: String, description: String, headlineImageUrl: URL, authors: [Author], displayTimestamp: Date) -> (model: Article, json: [String: Any]) {
+        
+        let article = Article(title: title, description: description, headlineImageUrl: headlineImageUrl, authors: authors, displayTimestamp: displayTimestamp)
+        
+        let authorsDict = authors.compactMap { author in
+            return [
+                "name": author.name,
+                "title": author.title,
+                "descriptionShort": author.descriptionShort,
+                "photo": author.photo!.absoluteString,
+            ].compactMapValues { $0 }
+        }
+        
+        
+        let json = [
+            "title": title,
+            "description": description,
+            "headlineImageUrl": headlineImageUrl.absoluteString,
+            "authors": authorsDict,
+            "displayTimestamp": Int(displayTimestamp.timeIntervalSince1970)
+        ].compactMapValues { $0 }
+        
+        return (article, json)
+    }
+    
     private func makeArticlesJSON(_ breakingNews: [[String: Any]], _ topNews: [[String: Any]], _ dailyBriefings: [[String: Any]], _ technicalAnalysis: [[String: Any]]) -> Data {
         let json = [
             "breakingNews": breakingNews,
             "topNews": topNews,
             "dailyBriefings": dailyBriefings,
             "technicalAnalysis": technicalAnalysis,
-            "specialReport": technicalAnalysis,
+            "specialReport": technicalAnalysis
         ]
+        print(json)
         return try! JSONSerialization.data(withJSONObject: json)
     }
     
