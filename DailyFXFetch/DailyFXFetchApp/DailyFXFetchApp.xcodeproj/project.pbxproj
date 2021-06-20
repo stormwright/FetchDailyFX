@@ -23,6 +23,7 @@
 		1B0A5D65267FDD7A00B88C92 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */; };
 		1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D66267FDE3300B88C92 /* ArticleDetailViewModel.swift */; };
 		1B0A5D7B267FE9E500B88C92 /* ArticlesDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A5D7A267FE9E500B88C92 /* ArticlesDashboard.storyboard */; };
+		1B0A5D7D267FEB9F00B88C92 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D7C267FEB9F00B88C92 /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		1B0A5D66267FDE3300B88C92 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		1B0A5D7A267FE9E500B88C92 /* ArticlesDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticlesDashboard.storyboard; sourceTree = "<group>"; };
+		1B0A5D7C267FEB9F00B88C92 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5D7A267FE9E500B88C92 /* ArticlesDashboard.storyboard */,
+				1B0A5D7C267FEB9F00B88C92 /* ArticleCell.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */,
 				1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */,
 				1B0A5D65267FDD7A00B88C92 /* ArticleDetailViewController.swift in Sources */,
+				1B0A5D7D267FEB9F00B88C92 /* ArticleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
