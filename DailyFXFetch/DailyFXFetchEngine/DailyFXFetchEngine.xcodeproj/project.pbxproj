@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5C8F267F61DD00B88C92 /* Helpers */,
-				1B0A5C6F267E9CBB00B88C92 /* Articles API */,
+				1B0A5C6F267E9CBB00B88C92 /* DailyFX API */,
 				1B0A5C3A267E921E00B88C92 /* Info.plist */,
 			);
 			path = DailyFXFetchEngineTests;
@@ -140,7 +140,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1B0A5C6F267E9CBB00B88C92 /* Articles API */ = {
+		1B0A5C6F267E9CBB00B88C92 /* DailyFX API */ = {
 			isa = PBXGroup;
 			children = (
 				1B0A5CDC267FA5FE00B88C92 /* Helpers */,
@@ -148,7 +148,7 @@
 				1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift */,
 				1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */,
 			);
-			path = "Articles API";
+			path = "DailyFX API";
 			sourceTree = "<group>";
 		};
 		1B0A5C8F267F61DD00B88C92 /* Helpers */ = {
