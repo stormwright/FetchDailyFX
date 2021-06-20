@@ -34,6 +34,7 @@
 		1B0A5D05267FBD5800B88C92 /* RemoteMarketsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D04267FBD5800B88C92 /* RemoteMarketsLoader.swift */; };
 		1B0A5D09267FBD8400B88C92 /* RemoteMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D08267FBD8400B88C92 /* RemoteMarket.swift */; };
 		1B0A5D0D267FBDA700B88C92 /* MarketsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D0C267FBDA700B88C92 /* MarketsMapper.swift */; };
+		1B0A5D8C2680046F00B88C92 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D8B2680046F00B88C92 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1B0A5D04267FBD5800B88C92 /* RemoteMarketsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMarketsLoader.swift; sourceTree = "<group>"; };
 		1B0A5D08267FBD8400B88C92 /* RemoteMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMarket.swift; sourceTree = "<group>"; };
 		1B0A5D0C267FBDA700B88C92 /* MarketsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsMapper.swift; sourceTree = "<group>"; };
+		1B0A5D8B2680046F00B88C92 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				1B0A5C97267F629600B88C92 /* ArticlesLoader.swift */,
 				1B0A5C9F267F630400B88C92 /* MarketsLoader.swift */,
 				1B0A5CE5267FA7F800B88C92 /* ImageDataLoader.swift */,
+				1B0A5D8B2680046F00B88C92 /* Router.swift */,
 			);
 			path = "Business Rules";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				1B0A5CB4267F641800B88C92 /* ArticlesMapper.swift in Sources */,
 				1B0A5CE6267FA7F800B88C92 /* ImageDataLoader.swift in Sources */,
 				1B0A5CBB267F644000B88C92 /* RemoteArticle.swift in Sources */,
+				1B0A5D8C2680046F00B88C92 /* Router.swift in Sources */,
 				1B0A5D0D267FBDA700B88C92 /* MarketsMapper.swift in Sources */,
 				1B0A5C98267F629600B88C92 /* ArticlesLoader.swift in Sources */,
 				1B0A5CA0267F630400B88C92 /* MarketsLoader.swift in Sources */,

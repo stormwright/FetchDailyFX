@@ -5,3 +5,9 @@
 //
 
 import Foundation
+
+public protocol Router {
+    associatedtype Destination
+
+    func route(to destination: Destination)
+}
