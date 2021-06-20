@@ -26,12 +26,11 @@ final class ArticleDetailView: UIView {
         tableView.dataSource = self
     }
     
-    func setUpView(title: String, date: Date, articleDescription: String, articleImage: UIImage) {
+    func setUpView(title: String, date: Date, articleDescription: String) {
         self.title.text = title
         let formatter = DateFormatter()
         formatter.timeStyle = .medium
         self.date.text = formatter.string(from: date)
-        self.articleImageView.setImageAnimated(articleImage)
     }
     
 }

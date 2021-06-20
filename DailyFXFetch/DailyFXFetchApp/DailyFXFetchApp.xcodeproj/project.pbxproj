@@ -20,6 +20,8 @@
 		1B0A5D5D267FD65800B88C92 /* DailyFXFetchEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A5D5B267FD65800B88C92 /* DailyFXFetchEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B0A5D61267FD94500B88C92 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D60267FD94500B88C92 /* UITableView+Dequeueing.swift */; };
 		1B0A5D63267FDA0D00B88C92 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D62267FDA0D00B88C92 /* UIImageView+Animations.swift */; };
+		1B0A5D65267FDD7A00B88C92 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */; };
+		1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D66267FDE3300B88C92 /* ArticleDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		1B0A5D5B267FD65800B88C92 /* DailyFXFetchEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DailyFXFetchEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0A5D60267FD94500B88C92 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		1B0A5D62267FDA0D00B88C92 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		1B0A5D66267FDE3300B88C92 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5D52267FD55200B88C92 /* AuthorCellController.swift */,
+				1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5D56267FD5A300B88C92 /* AuthorCellViewModel.swift */,
+				1B0A5D66267FDE3300B88C92 /* ArticleDetailViewModel.swift */,
 			);
 			path = "Detail View";
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 				1B0A5D61267FD94500B88C92 /* UITableView+Dequeueing.swift in Sources */,
 				1B0A5D21267FC09500B88C92 /* AppDelegate.swift in Sources */,
 				1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */,
+				1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */,
+				1B0A5D65267FDD7A00B88C92 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
