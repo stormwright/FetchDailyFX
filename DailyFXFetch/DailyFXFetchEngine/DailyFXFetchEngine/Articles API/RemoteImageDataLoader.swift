@@ -8,14 +8,14 @@ import Foundation
 
 public final class RemoteImageDataLoader: ImageDataLoader {
     
-    private let client: HTTPClientForArticles
+    private let client: HTTPClient
     
     public enum Error: Swift.Error {
         case connectivity
         case invalidData
     }
     
-    public init(client: HTTPClientForArticles) {
+    public init(client: HTTPClient) {
         self.client = client
     }
     

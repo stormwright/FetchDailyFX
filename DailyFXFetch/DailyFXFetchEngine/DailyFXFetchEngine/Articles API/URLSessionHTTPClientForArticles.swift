@@ -6,7 +6,7 @@
 
 import Foundation
 
-public final class URLSessionHTTPClientForArticles: HTTPClientForArticles {
+public final class URLSessionHTTPClientForArticles: HTTPClient {
     
     private let session: URLSession
     
@@ -24,7 +24,7 @@ public final class URLSessionHTTPClientForArticles: HTTPClientForArticles {
         }
     }
     
-    public func get(from url: URL, completion: @escaping (HTTPClientForArticles.Result) -> Void) -> HTTPClientTask {
+    public func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         let task = session.dataTask(with: url) { data, response, error in
             completion(Result {
                 if let error = error {

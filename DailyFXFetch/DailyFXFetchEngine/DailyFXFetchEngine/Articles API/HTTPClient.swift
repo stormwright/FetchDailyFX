@@ -1,5 +1,5 @@
 //
-// HTTPClientForArticles.swift
+// HTTPClient.swift
 // Created by Mikayil M on 20/06/2021
 // 
 //
@@ -10,7 +10,7 @@ public protocol HTTPClientTask {
     func cancel()
 }
 
-public protocol HTTPClientForArticles {
+public protocol HTTPClient {
     typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
     
     @discardableResult

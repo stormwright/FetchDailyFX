@@ -80,7 +80,7 @@ class URLSessionHTTPClientForArticlesTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> HTTPClientForArticles {
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> HTTPClient {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: configuration)
@@ -102,13 +102,13 @@ class URLSessionHTTPClientForArticlesTests: XCTestCase {
         }
     }
     
-    private func resultFor(_ values: (data: Data?, response: URLResponse?, error: Error?)?, taskHandler: (HTTPClientTask) -> Void = { _ in },  file: StaticString = #file, line: UInt = #line) -> HTTPClientForArticles.Result {
+    private func resultFor(_ values: (data: Data?, response: URLResponse?, error: Error?)?, taskHandler: (HTTPClientTask) -> Void = { _ in },  file: StaticString = #file, line: UInt = #line) -> HTTPClient.Result {
         values.map { URLProtocolStub.stub(data: $0, response: $1, error: $2) }
         
         let sut = makeSUT(file: file, line: line)
         let exp = expectation(description: "Wait for completion")
         
-        var receivedResult: HTTPClientForArticles.Result!
+        var receivedResult: HTTPClient.Result!
         taskHandler(sut.get(from: anyURL()) { result in
             receivedResult = result
             exp.fulfill()
