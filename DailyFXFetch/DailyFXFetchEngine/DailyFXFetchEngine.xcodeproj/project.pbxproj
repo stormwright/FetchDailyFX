@@ -31,6 +31,9 @@
 		1B0A5CEA267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */; };
 		1B0A5CEE267FB33300B88C92 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */; };
 		1B0A5D01267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D00267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift */; };
+		1B0A5D05267FBD5800B88C92 /* RemoteMarketsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D04267FBD5800B88C92 /* RemoteMarketsLoader.swift */; };
+		1B0A5D09267FBD8400B88C92 /* RemoteMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D08267FBD8400B88C92 /* RemoteMarket.swift */; };
+		1B0A5D0D267FBDA700B88C92 /* MarketsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D0C267FBDA700B88C92 /* MarketsMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		1B0A5CE9267FADC000B88C92 /* LoadImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
 		1B0A5D00267FB5C800B88C92 /* LoadMarketsFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMarketsFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
+		1B0A5D04267FBD5800B88C92 /* RemoteMarketsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMarketsLoader.swift; sourceTree = "<group>"; };
+		1B0A5D08267FBD8400B88C92 /* RemoteMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMarket.swift; sourceTree = "<group>"; };
+		1B0A5D0C267FBDA700B88C92 /* MarketsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,9 @@
 				1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */,
 				1B0A5CAF267F63F100B88C92 /* HTTPClient.swift */,
 				1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClient.swift */,
+				1B0A5D04267FBD5800B88C92 /* RemoteMarketsLoader.swift */,
+				1B0A5D08267FBD8400B88C92 /* RemoteMarket.swift */,
+				1B0A5D0C267FBDA700B88C92 /* MarketsMapper.swift */,
 			);
 			path = "DailyFX API";
 			sourceTree = "<group>";
@@ -336,14 +345,17 @@
 				1B0A5CB4267F641800B88C92 /* ArticlesMapper.swift in Sources */,
 				1B0A5CE6267FA7F800B88C92 /* ImageDataLoader.swift in Sources */,
 				1B0A5CBB267F644000B88C92 /* RemoteArticle.swift in Sources */,
+				1B0A5D0D267FBDA700B88C92 /* MarketsMapper.swift in Sources */,
 				1B0A5C98267F629600B88C92 /* ArticlesLoader.swift in Sources */,
 				1B0A5CA0267F630400B88C92 /* MarketsLoader.swift in Sources */,
+				1B0A5D09267FBD8400B88C92 /* RemoteMarket.swift in Sources */,
 				1B0A5CB0267F63F100B88C92 /* HTTPClient.swift in Sources */,
 				1B0A5C64267E9AA700B88C92 /* Article.swift in Sources */,
 				1B0A5CAA267F63BB00B88C92 /* RemoteArticlesLoader.swift in Sources */,
 				1B0A5CEE267FB33300B88C92 /* RemoteImageDataLoader.swift in Sources */,
 				1B0A5C68267E9AD000B88C92 /* Market.swift in Sources */,
 				1B0A5CC5267F648800B88C92 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				1B0A5D05267FBD5800B88C92 /* RemoteMarketsLoader.swift in Sources */,
 				1B0A5CA5267F636500B88C92 /* Int+Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
