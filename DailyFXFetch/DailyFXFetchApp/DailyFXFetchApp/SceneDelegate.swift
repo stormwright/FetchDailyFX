@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  DailyFXFetchApp
 //
-//  Created by Mammadov, Mikayil (Proagrica) on 20/06/2021.
+//  Created by Mammadov, Mikayil on 20/06/2021.
 //
 
 import UIKit
