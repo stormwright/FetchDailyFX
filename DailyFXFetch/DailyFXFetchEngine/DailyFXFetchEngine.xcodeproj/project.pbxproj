@@ -25,6 +25,7 @@
 		1B0A5CC9267F650300B88C92 /* HTTPClientForArticlesSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CC8267F650300B88C92 /* HTTPClientForArticlesSpy.swift */; };
 		1B0A5CCF267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift */; };
 		1B0A5CD3267FA12400B88C92 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CD2267FA12400B88C92 /* URLProtocolStub.swift */; };
+		1B0A5CD9267FA5BC00B88C92 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CD8267FA5BC00B88C92 /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1B0A5CC8267F650300B88C92 /* HTTPClientForArticlesSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientForArticlesSpy.swift; sourceTree = "<group>"; };
 		1B0A5CCE267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientForArticlesTests.swift; sourceTree = "<group>"; };
 		1B0A5CD2267FA12400B88C92 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		1B0A5CD8267FA5BC00B88C92 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5C90267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift */,
+				1B0A5CD8267FA5BC00B88C92 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				1B0A5CCF267FA0DA00B88C92 /* URLSessionHTTPClientForArticlesTests.swift in Sources */,
 				1B0A5C71267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift in Sources */,
+				1B0A5CD9267FA5BC00B88C92 /* SharedTestHelpers.swift in Sources */,
 				1B0A5CC9267F650300B88C92 /* HTTPClientForArticlesSpy.swift in Sources */,
 				1B0A5C91267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				1B0A5CD3267FA12400B88C92 /* URLProtocolStub.swift in Sources */,
