@@ -1,5 +1,5 @@
 //
-// URLSessionHTTPClientForArticlesTests.swift
+// URLSessionHTTPClientTests.swift
 // Created by Mikayil M on 20/06/2021
 // 
 //
@@ -7,7 +7,7 @@
 import XCTest
 import DailyFXFetchEngine
 
-class URLSessionHTTPClientForArticlesTests: XCTestCase {
+class URLSessionHTTPClientTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
