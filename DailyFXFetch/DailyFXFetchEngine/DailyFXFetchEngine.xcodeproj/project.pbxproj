@@ -22,6 +22,7 @@
 		1B0A5CBB267F644000B88C92 /* RemoteArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CBA267F644000B88C92 /* RemoteArticle.swift */; };
 		1B0A5CC1267F645600B88C92 /* RemoteAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CC0267F645600B88C92 /* RemoteAuthor.swift */; };
 		1B0A5CC5267F648800B88C92 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CC4267F648800B88C92 /* HTTPURLResponse+StatusCode.swift */; };
+		1B0A5CC9267F650300B88C92 /* HTTPClientForArticlesSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5CC8267F650300B88C92 /* HTTPClientForArticlesSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1B0A5CBA267F644000B88C92 /* RemoteArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticle.swift; sourceTree = "<group>"; };
 		1B0A5CC0267F645600B88C92 /* RemoteAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthor.swift; sourceTree = "<group>"; };
 		1B0A5CC4267F648800B88C92 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		1B0A5CC8267F650300B88C92 /* HTTPClientForArticlesSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientForArticlesSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		1B0A5C6F267E9CBB00B88C92 /* Articles API */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A5CC8267F650300B88C92 /* HTTPClientForArticlesSpy.swift */,
 				1B0A5C70267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift */,
 			);
 			path = "Articles API";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0A5C71267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift in Sources */,
+				1B0A5CC9267F650300B88C92 /* HTTPClientForArticlesSpy.swift in Sources */,
 				1B0A5C91267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
