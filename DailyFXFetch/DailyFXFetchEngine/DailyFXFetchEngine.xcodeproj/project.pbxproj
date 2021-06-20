@@ -182,9 +182,7 @@
 		1B0A5CA8267F63A600B88C92 /* DailyFX API */ = {
 			isa = PBXGroup;
 			children = (
-				1B0A5CB9267F643000B88C92 /* DTOs */,
-				1B0A5CA9267F63BB00B88C92 /* RemoteArticlesLoader.swift */,
-				1B0A5CB3267F641800B88C92 /* ArticlesMapper.swift */,
+				1B0A5CF9267FB4CE00B88C92 /* Articles API */,
 				1B0A5CED267FB33300B88C92 /* RemoteImageDataLoader.swift */,
 				1B0A5CAF267F63F100B88C92 /* HTTPClient.swift */,
 				1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClient.swift */,
@@ -208,6 +206,16 @@
 				1B0A5CD2267FA12400B88C92 /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1B0A5CF9267FB4CE00B88C92 /* Articles API */ = {
+			isa = PBXGroup;
+			children = (
+				1B0A5CB9267F643000B88C92 /* DTOs */,
+				1B0A5CA9267F63BB00B88C92 /* RemoteArticlesLoader.swift */,
+				1B0A5CB3267F641800B88C92 /* ArticlesMapper.swift */,
+			);
+			path = "Articles API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
