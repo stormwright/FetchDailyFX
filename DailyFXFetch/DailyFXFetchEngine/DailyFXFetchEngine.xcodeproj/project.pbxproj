@@ -114,7 +114,7 @@
 				1B0A5CA3267F635300B88C92 /* Helpers */,
 				1B0A5C56267E98C300B88C92 /* Models */,
 				1B0A5C96267F628100B88C92 /* Business Rules */,
-				1B0A5CA8267F63A600B88C92 /* Articles API */,
+				1B0A5CA8267F63A600B88C92 /* DailyFX API */,
 				1B0A5C2E267E921E00B88C92 /* Info.plist */,
 			);
 			path = DailyFXFetchEngine;
@@ -179,7 +179,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1B0A5CA8267F63A600B88C92 /* Articles API */ = {
+		1B0A5CA8267F63A600B88C92 /* DailyFX API */ = {
 			isa = PBXGroup;
 			children = (
 				1B0A5CB9267F643000B88C92 /* DTOs */,
@@ -189,7 +189,7 @@
 				1B0A5CAF267F63F100B88C92 /* HTTPClient.swift */,
 				1B0A5CDF267FA65100B88C92 /* URLSessionHTTPClient.swift */,
 			);
-			path = "Articles API";
+			path = "DailyFX API";
 			sourceTree = "<group>";
 		};
 		1B0A5CB9267F643000B88C92 /* DTOs */ = {
