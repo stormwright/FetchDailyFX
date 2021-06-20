@@ -14,6 +14,7 @@
 		1B0A5C71267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C70267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift */; };
 		1B0A5C91267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C90267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift */; };
 		1B0A5C98267F629600B88C92 /* ArticlesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C97267F629600B88C92 /* ArticlesLoader.swift */; };
+		1B0A5CA0267F630400B88C92 /* MarketsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5C9F267F630400B88C92 /* MarketsLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		1B0A5C70267E9F2C00B88C92 /* LoadArticlesFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadArticlesFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		1B0A5C90267F620400B88C92 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		1B0A5C97267F629600B88C92 /* ArticlesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesLoader.swift; sourceTree = "<group>"; };
+		1B0A5C9F267F630400B88C92 /* MarketsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5C97267F629600B88C92 /* ArticlesLoader.swift */,
+				1B0A5C9F267F630400B88C92 /* MarketsLoader.swift */,
 			);
 			path = "Business Rules";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				1B0A5C6C267E9AEE00B88C92 /* Author.swift in Sources */,
 				1B0A5C98267F629600B88C92 /* ArticlesLoader.swift in Sources */,
+				1B0A5CA0267F630400B88C92 /* MarketsLoader.swift in Sources */,
 				1B0A5C64267E9AA700B88C92 /* Article.swift in Sources */,
 				1B0A5C68267E9AD000B88C92 /* Market.swift in Sources */,
 			);
