@@ -12,7 +12,6 @@ final class ArticleDetailView: UIView {
     @IBOutlet private(set) var title: UILabel!
     @IBOutlet private(set) var date: UILabel!
     @IBOutlet private(set) var articleDescription: UILabel!
-    @IBOutlet private(set) var articleImageView: UIImageView!
     
     var tableModel = [AuthorCellController]() {
         didSet{
@@ -24,6 +23,7 @@ final class ArticleDetailView: UIView {
         super.awakeFromNib()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     func setUpView(title: String, date: Date, articleDescription: String) {
@@ -43,12 +43,7 @@ extension ArticleDetailView: UITableViewDelegate, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cellController(forRowAt: indexPath).view(in: tableView)
-        let numberOfRowsInSection = tableModel.count
-        let lastRow = numberOfRowsInSection - 1
-        if indexPath.row == lastRow {
-            // hide last separator
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-        }
+
         return cell
     }
     

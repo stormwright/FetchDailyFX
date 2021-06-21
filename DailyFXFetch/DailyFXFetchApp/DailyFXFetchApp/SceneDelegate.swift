@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let remoteArticlesLoader = RemoteArticlesLoader(url: url, client: httpClient)
         let remoteImageLoader = RemoteImageDataLoader(client: httpClient)
         let navigationController = UINavigationController()
-        let factory = AppViewControllerFactory(httpClient: httpClient)
+        let factory = AppViewControllerFactory(imageLoader: remoteImageLoader)
         let articlesRouter = ArticlesRouter(navigationController: navigationController, factory: factory)
         
         let view = ArticlesDashboardUIComposer.dashboardComposedWith(articlesLoader: remoteArticlesLoader, imageLoader: remoteImageLoader, router: articlesRouter)

@@ -9,15 +9,14 @@ import DailyFXFetchEngine
 
 final class AppViewControllerFactory: ArticlesViewControllerFactory {
     
-    private let httpClient: HTTPClient
+    private let imageLoader: ImageDataLoader
     
-    init(httpClient: HTTPClient) {
-        self.httpClient = httpClient
+    init(imageLoader: ImageDataLoader) {
+        self.imageLoader = imageLoader
     }
     
-    
-    
     func articleDetailView(_ article: Article) -> UIViewController {
-        return UIViewController()
+        let view = ArticleDetailViewUIComposer.detailViewComposedWith(article: article, imageLoader: imageLoader)
+        return view
     }
 }

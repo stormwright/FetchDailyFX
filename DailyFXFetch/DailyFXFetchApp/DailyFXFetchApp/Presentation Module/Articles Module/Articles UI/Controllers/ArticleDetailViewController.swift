@@ -9,15 +9,14 @@ import DailyFXFetchEngine
 
 class ArticleDetailViewController: UIViewController {
     
-    @IBOutlet private(set) var detailView: ArticleDetailView!
+    @IBOutlet var detailView: ArticleDetailView!
     
-    var viewModel: ArticleDetailViewModel<UIImage>? {
-        didSet{ bindViewModel() }
-    }    
+    var viewModel: ArticleDetailViewModel?   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bindDetailView()
+        bindViewModel()
         loadAuthors()
     }
     
@@ -25,11 +24,7 @@ class ArticleDetailViewController: UIViewController {
         viewModel?.loadAuthors()
     }
     
-    private func bindViewModel() {
-        viewModel?.onImageLoad = { [weak self] image in
-            self?.detailView.articleImageView.setImageAnimated(image)
-        }
-        
+    private func bindViewModel() {        
         viewModel?.onAuthorsLoad = adaptToCellControllers(forwardingTo: detailView, imageLoader: viewModel!.imageLoader)
     }
     

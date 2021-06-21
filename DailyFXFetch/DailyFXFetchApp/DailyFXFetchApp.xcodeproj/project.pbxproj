@@ -33,6 +33,7 @@
 		1B0A5D912680071500B88C92 /* ArticlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D902680071500B88C92 /* ArticlesRouter.swift */; };
 		1B0A5D932680073300B88C92 /* ArticlesViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D922680073300B88C92 /* ArticlesViewControllerFactory.swift */; };
 		1B0A5D952680082B00B88C92 /* AppViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D942680082B00B88C92 /* AppViewControllerFactory.swift */; };
+		1B0A5D97268071B400B88C92 /* ArticleDetailViewUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D96268071B400B88C92 /* ArticleDetailViewUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +78,7 @@
 		1B0A5D902680071500B88C92 /* ArticlesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRouter.swift; sourceTree = "<group>"; };
 		1B0A5D922680073300B88C92 /* ArticlesViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewControllerFactory.swift; sourceTree = "<group>"; };
 		1B0A5D942680082B00B88C92 /* AppViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllerFactory.swift; sourceTree = "<group>"; };
+		1B0A5D96268071B400B88C92 /* ArticleDetailViewUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0A5D872680024C00B88C92 /* ArticlesDashboardUIComposer.swift */,
+				1B0A5D96268071B400B88C92 /* ArticleDetailViewUIComposer.swift */,
 				1B0A5D89268002B400B88C92 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Composers;
@@ -181,10 +184,10 @@
 		1B0A5D46267FCD5700B88C92 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B0A5D52267FD55200B88C92 /* AuthorCellController.swift */,
-				1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */,
-				1B0A5D83267FFDDF00B88C92 /* ArticleCellController.swift */,
 				1B0A5D852680015B00B88C92 /* ArticlesDashboardViewController.swift */,
+				1B0A5D83267FFDDF00B88C92 /* ArticleCellController.swift */,
+				1B0A5D64267FDD7A00B88C92 /* ArticleDetailViewController.swift */,
+				1B0A5D52267FD55200B88C92 /* AuthorCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				1B0A5D82267FFDAA00B88C92 /* ArticleCellViewModel.swift in Sources */,
 				1B0A5D61267FD94500B88C92 /* UITableView+Dequeueing.swift in Sources */,
 				1B0A5D862680015B00B88C92 /* ArticlesDashboardViewController.swift in Sources */,
+				1B0A5D97268071B400B88C92 /* ArticleDetailViewUIComposer.swift in Sources */,
 				1B0A5D21267FC09500B88C92 /* AppDelegate.swift in Sources */,
 				1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */,
 				1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */,
