@@ -90,23 +90,10 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
             authors: [author1],
             displayTimestamp: 1624114800000.date)
         
-        let author2 = Author(
-            name: "Christopher Vecchio, CFA",
-            title: "Senior Strategist",
-            descriptionShort: "At DailyFX Since: 2008. Experience: Started trading in equities in 2004 and FX in 2008. Has worked with DailyFX since attending college in 2008 starting with an internship. Has consulted multi-national firms on FX hedging and has lectured at Duke Law School on FX derivatives trading.",
-            photo: URL(string: "https://a.c-dn.net/b/2SwDd5/Christopher_Vecchio.png"))
-        
-        let article2 = makeArticle(
-            title: "Euro Technical Analysis: Losing Steam Ahead of FOMC - Levels for EUR/GBP, EUR/JPY, EUR/USD",
-            description: "The Euro has not made much progress in June and may be nearing a short-term inflection point as a result.",
-            headlineImageUrl: URL(string: "https://a.c-dn.net/b/2OIPnn/headline_EU_FLAG.JPG")!,
-            authors: [author2],
-            displayTimestamp: 1623681900000.date)
-        
-        let articles = [article1.model, article2.model]
+        let articles = [article1.model]
         
         expect(sut, toCompleteWith: .success(articles), when: {
-            let json = makeArticlesJSON([], [article1.json], [article2.json], [])
+            let json = makeArticlesJSON([], [article1.json], [], [])
             client.complete(withStatusCode: 200, data: json)
         })
     }
@@ -164,14 +151,18 @@ class LoadArticlesFeedFromRemoteUseCaseTests: XCTestCase {
         return (article, json)
     }
     
-    private func makeArticlesJSON(_ breakingNews: [[String: Any]], _ topNews: [[String: Any]], _ dailyBriefings: [[String: Any]], _ technicalAnalysis: [[String: Any]]) -> Data {
+    private func makeArticlesJSON(_ breakingNews: [[String: Any]]?, _ topNews: [[String: Any]]?, _ dailyBriefings: [[String: Any]]?, _ technicalAnalysis: [[String: Any]]?) -> Data {
         let json = [
-            "breakingNews": breakingNews,
-            "topNews": topNews,
-            "dailyBriefings": dailyBriefings,
-            "technicalAnalysis": technicalAnalysis,
-            "specialReport": technicalAnalysis
-        ]
+            "breakingNews": breakingNews as Any,
+            "topNews": topNews as Any,
+            "dailyBriefings": [
+                "eu": dailyBriefings,
+                "asia": dailyBriefings,
+                "us": dailyBriefings,
+            ],
+            "technicalAnalysis": technicalAnalysis as Any,
+            "specialReport": technicalAnalysis as Any
+        ] as [String : Any]
         return try! JSONSerialization.data(withJSONObject: json)
     }
     
