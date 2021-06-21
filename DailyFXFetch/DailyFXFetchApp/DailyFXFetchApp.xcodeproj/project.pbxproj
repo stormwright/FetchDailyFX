@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0972AB2680781B00FF5E31 /* Markets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0972AA2680781B00FF5E31 /* Markets.storyboard */; };
+		1B0972AD268078BA00FF5E31 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972AC268078BA00FF5E31 /* MarketCell.swift */; };
 		1B0A5D21267FC09500B88C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D20267FC09500B88C92 /* AppDelegate.swift */; };
 		1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */; };
 		1B0A5D2A267FC09700B88C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A5D29267FC09700B88C92 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B0972AA2680781B00FF5E31 /* Markets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Markets.storyboard; sourceTree = "<group>"; };
+		1B0972AC268078BA00FF5E31 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		1B0A5D1D267FC09500B88C92 /* DailyFXFetchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFXFetchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0A5D20267FC09500B88C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0972A42680776B00FF5E31 /* Markets Module */ = {
+			isa = PBXGroup;
+			children = (
+				1B0972A52680777D00FF5E31 /* Markets UI */,
+				1B0972A62680778600FF5E31 /* ViewModels */,
+			);
+			path = "Markets Module";
+			sourceTree = "<group>";
+		};
+		1B0972A52680777D00FF5E31 /* Markets UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B0972A72680779B00FF5E31 /* Composers */,
+				1B0972A9268077AC00FF5E31 /* Controllers */,
+				1B0972A8268077A600FF5E31 /* Views */,
+			);
+			path = "Markets UI";
+			sourceTree = "<group>";
+		};
+		1B0972A62680778600FF5E31 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1B0972A72680779B00FF5E31 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		1B0972A8268077A600FF5E31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B0972AA2680781B00FF5E31 /* Markets.storyboard */,
+				1B0972AC268078BA00FF5E31 /* MarketCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B0972A9268077AC00FF5E31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1B0A5D14267FC09500B88C92 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +182,7 @@
 			children = (
 				1B0A5D5F267FD91700B88C92 /* Helpers */,
 				1B0A5D41267FCD0500B88C92 /* Articles Module */,
+				1B0972A42680776B00FF5E31 /* Markets Module */,
 			);
 			path = "Presentation Module";
 			sourceTree = "<group>";
@@ -317,6 +371,7 @@
 				1B0A5D4A267FCDB700B88C92 /* ArticleDetailView.storyboard in Resources */,
 				1B0A5D2D267FC09700B88C92 /* LaunchScreen.storyboard in Resources */,
 				1B0A5D7B267FE9E500B88C92 /* ArticlesDashboard.storyboard in Resources */,
+				1B0972AB2680781B00FF5E31 /* Markets.storyboard in Resources */,
 				1B0A5D2A267FC09700B88C92 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +390,7 @@
 				1B0A5D932680073300B88C92 /* ArticlesViewControllerFactory.swift in Sources */,
 				1B0A5D882680024C00B88C92 /* ArticlesDashboardUIComposer.swift in Sources */,
 				1B0A5D63267FDA0D00B88C92 /* UIImageView+Animations.swift in Sources */,
+				1B0972AD268078BA00FF5E31 /* MarketCell.swift in Sources */,
 				1B0A5D8A268002B400B88C92 /* MainQueueDispatchDecorator.swift in Sources */,
 				1B0A5D53267FD55200B88C92 /* AuthorCellController.swift in Sources */,
 				1B0A5D952680082B00B88C92 /* AppViewControllerFactory.swift in Sources */,
