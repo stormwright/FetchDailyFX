@@ -42,7 +42,9 @@ class ArticlesDashboardViewController: UITableViewController, UITableViewDataSou
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = cellController(forRowAt: indexPath).loadModel()
-        router?.route(to: .detailView(article: model))
+        if let navigationController = self.navigationController {
+            router?.route(to: .detailView(article: model, navigationController: navigationController))
+        }
     }
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {

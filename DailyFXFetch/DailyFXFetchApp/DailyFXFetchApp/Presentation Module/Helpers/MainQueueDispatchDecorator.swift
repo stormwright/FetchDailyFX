@@ -39,3 +39,11 @@ extension MainQueueDispatchDecorator: ImageDataLoader where T == ImageDataLoader
     }
 }
 
+extension MainQueueDispatchDecorator: MarketsLoader where T == MarketsLoader {
+    func load(completion: @escaping (MarketsLoader.Result) -> Void) {
+        decoratee.load { [weak self] result in
+            self?.dispatch { completion(result) }
+        }
+    }
+}
+

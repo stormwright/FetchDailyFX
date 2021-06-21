@@ -25,17 +25,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func configureWindow() {
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [articles(), markets()]
+ 
+        window?.rootViewController = tabBar
+    }
+    
+    private func articles() -> UIViewController {
         let url = URL(string: "https://content.dailyfx.com/api/v1/dashboard")!
         let remoteArticlesLoader = RemoteArticlesLoader(url: url, client: httpClient)
         let remoteImageLoader = RemoteImageDataLoader(client: httpClient)
-        let navigationController = UINavigationController()
         let factory = AppViewControllerFactory(imageLoader: remoteImageLoader)
-        let articlesRouter = ArticlesRouter(navigationController: navigationController, factory: factory)
+        let articlesRouter = ArticlesRouter(factory: factory)
         
-        let view = ArticlesDashboardUIComposer.dashboardComposedWith(articlesLoader: remoteArticlesLoader, imageLoader: remoteImageLoader, router: articlesRouter)
-        navigationController.setViewControllers([view], animated: true)
+        let view = UINavigationController(
+            rootViewController: ArticlesDashboardUIComposer.dashboardComposedWith(
+                articlesLoader: remoteArticlesLoader,
+                imageLoader: remoteImageLoader,
+                router: articlesRouter))
         
-        window?.rootViewController = navigationController
+        view.tabBarItem.title = "Articles"
+        return view
+    }
+    
+    private func markets() -> UIViewController {
+        let url = URL(string: "https://content.dailyfx.com/api/v1/markets")!
+        let marketsLoader = RemoteMarketsLoader(url: url, client: httpClient)
+        let view = MarketsUIComposer.dashboardComposedWith(marketsLoader: marketsLoader)
+        view.tabBarItem.title = "Markets"
+        return view
     }
 
 }

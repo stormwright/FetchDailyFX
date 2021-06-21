@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1B0972AB2680781B00FF5E31 /* Markets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0972AA2680781B00FF5E31 /* Markets.storyboard */; };
 		1B0972AD268078BA00FF5E31 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972AC268078BA00FF5E31 /* MarketCell.swift */; };
+		1B0972AF2680795C00FF5E31 /* MarketCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972AE2680795C00FF5E31 /* MarketCellViewModel.swift */; };
+		1B0972B126807A4000FF5E31 /* MarketCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972B026807A4000FF5E31 /* MarketCellController.swift */; };
+		1B0972B326807AF200FF5E31 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972B226807AF200FF5E31 /* MarketsViewController.swift */; };
+		1B0972B526807B2300FF5E31 /* MarketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972B426807B2300FF5E31 /* MarketsViewModel.swift */; };
+		1B0972B726807C5500FF5E31 /* MarketsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0972B626807C5500FF5E31 /* MarketsUIComposer.swift */; };
 		1B0A5D21267FC09500B88C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D20267FC09500B88C92 /* AppDelegate.swift */; };
 		1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */; };
 		1B0A5D2A267FC09700B88C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A5D29267FC09700B88C92 /* Assets.xcassets */; };
@@ -55,6 +60,11 @@
 /* Begin PBXFileReference section */
 		1B0972AA2680781B00FF5E31 /* Markets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Markets.storyboard; sourceTree = "<group>"; };
 		1B0972AC268078BA00FF5E31 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		1B0972AE2680795C00FF5E31 /* MarketCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCellViewModel.swift; sourceTree = "<group>"; };
+		1B0972B026807A4000FF5E31 /* MarketCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCellController.swift; sourceTree = "<group>"; };
+		1B0972B226807AF200FF5E31 /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		1B0972B426807B2300FF5E31 /* MarketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewModel.swift; sourceTree = "<group>"; };
+		1B0972B626807C5500FF5E31 /* MarketsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsUIComposer.swift; sourceTree = "<group>"; };
 		1B0A5D1D267FC09500B88C92 /* DailyFXFetchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFXFetchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0A5D20267FC09500B88C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B0A5D22267FC09500B88C92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +129,8 @@
 		1B0972A62680778600FF5E31 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1B0972B426807B2300FF5E31 /* MarketsViewModel.swift */,
+				1B0972AE2680795C00FF5E31 /* MarketCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 		1B0972A72680779B00FF5E31 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
+				1B0972B626807C5500FF5E31 /* MarketsUIComposer.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -142,6 +155,8 @@
 		1B0972A9268077AC00FF5E31 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1B0972B226807AF200FF5E31 /* MarketsViewController.swift */,
+				1B0972B026807A4000FF5E31 /* MarketCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,7 +236,6 @@
 			children = (
 				1B0A5D872680024C00B88C92 /* ArticlesDashboardUIComposer.swift */,
 				1B0A5D96268071B400B88C92 /* ArticleDetailViewUIComposer.swift */,
-				1B0A5D89268002B400B88C92 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -287,6 +301,7 @@
 			children = (
 				1B0A5D60267FD94500B88C92 /* UITableView+Dequeueing.swift */,
 				1B0A5D62267FDA0D00B88C92 /* UIImageView+Animations.swift */,
+				1B0A5D89268002B400B88C92 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -383,26 +398,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0972B726807C5500FF5E31 /* MarketsUIComposer.swift in Sources */,
 				1B0A5D84267FFDDF00B88C92 /* ArticleCellController.swift in Sources */,
 				1B0A5D80267FFD6500B88C92 /* ArticlesDashboardViewModel.swift in Sources */,
 				1B0A5D50267FD31C00B88C92 /* ArticleDetailView.swift in Sources */,
 				1B0A5D912680071500B88C92 /* ArticlesRouter.swift in Sources */,
 				1B0A5D932680073300B88C92 /* ArticlesViewControllerFactory.swift in Sources */,
+				1B0972AF2680795C00FF5E31 /* MarketCellViewModel.swift in Sources */,
 				1B0A5D882680024C00B88C92 /* ArticlesDashboardUIComposer.swift in Sources */,
 				1B0A5D63267FDA0D00B88C92 /* UIImageView+Animations.swift in Sources */,
 				1B0972AD268078BA00FF5E31 /* MarketCell.swift in Sources */,
 				1B0A5D8A268002B400B88C92 /* MainQueueDispatchDecorator.swift in Sources */,
 				1B0A5D53267FD55200B88C92 /* AuthorCellController.swift in Sources */,
+				1B0972B326807AF200FF5E31 /* MarketsViewController.swift in Sources */,
 				1B0A5D952680082B00B88C92 /* AppViewControllerFactory.swift in Sources */,
 				1B0A5D4D267FD1D000B88C92 /* AuthorCell.swift in Sources */,
 				1B0A5D57267FD5A300B88C92 /* AuthorCellViewModel.swift in Sources */,
 				1B0A5D82267FFDAA00B88C92 /* ArticleCellViewModel.swift in Sources */,
+				1B0972B526807B2300FF5E31 /* MarketsViewModel.swift in Sources */,
 				1B0A5D61267FD94500B88C92 /* UITableView+Dequeueing.swift in Sources */,
 				1B0A5D862680015B00B88C92 /* ArticlesDashboardViewController.swift in Sources */,
 				1B0A5D97268071B400B88C92 /* ArticleDetailViewUIComposer.swift in Sources */,
 				1B0A5D21267FC09500B88C92 /* AppDelegate.swift in Sources */,
 				1B0A5D23267FC09500B88C92 /* SceneDelegate.swift in Sources */,
 				1B0A5D67267FDE3300B88C92 /* ArticleDetailViewModel.swift in Sources */,
+				1B0972B126807A4000FF5E31 /* MarketCellController.swift in Sources */,
 				1B0A5D65267FDD7A00B88C92 /* ArticleDetailViewController.swift in Sources */,
 				1B0A5D7D267FEB9F00B88C92 /* ArticleCell.swift in Sources */,
 			);

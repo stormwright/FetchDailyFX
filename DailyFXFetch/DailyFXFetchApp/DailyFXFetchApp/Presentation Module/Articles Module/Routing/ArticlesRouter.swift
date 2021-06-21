@@ -10,26 +10,24 @@ import DailyFXFetchEngine
 final class ArticlesRouter: Router {
     
     enum Destination {
-        case detailView(article: Article)
+        case detailView(article: Article, navigationController: UINavigationController)
         case errorView
     }
     
     private let factory: ArticlesViewControllerFactory
     
-    private weak var navigationController: UINavigationController?
-    
-    public init(navigationController: UINavigationController, factory: ArticlesViewControllerFactory) {
-        self.navigationController = navigationController
+    public init(factory: ArticlesViewControllerFactory) {
         self.factory = factory
     }
     
     func route(to destination: Destination) {
         switch destination {
-        case .detailView(let article):
+        case .detailView(let article, let navigationController):
             let detailVC = factory.articleDetailView(article)
-            navigationController?.pushViewController(detailVC, animated: true)
+            navigationController.pushViewController(detailVC, animated: true)
+            
         case .errorView:
-            navigationController?.pushViewController(UIViewController(), animated: true)
+            break
         }
     }
 }
