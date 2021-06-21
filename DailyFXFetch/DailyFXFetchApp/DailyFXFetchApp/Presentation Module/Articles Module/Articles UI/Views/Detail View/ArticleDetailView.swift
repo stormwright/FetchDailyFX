@@ -31,6 +31,7 @@ final class ArticleDetailView: UIView {
         let formatter = DateFormatter()
         formatter.timeStyle = .medium
         self.date.text = formatter.string(from: date)
+        self.articleDescription.text = articleDescription
     }
     
 }
