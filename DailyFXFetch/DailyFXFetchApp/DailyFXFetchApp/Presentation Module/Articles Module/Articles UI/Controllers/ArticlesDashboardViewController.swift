@@ -18,7 +18,7 @@ class ArticlesDashboardViewController: UITableViewController, UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.tableFooterView = UIView()
         loadArticles()
     }
     
@@ -32,7 +32,8 @@ class ArticlesDashboardViewController: UITableViewController, UITableViewDataSou
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellController(forRowAt: indexPath).view(in: tableView)
+        let cell = cellController(forRowAt: indexPath).view(in: tableView)
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

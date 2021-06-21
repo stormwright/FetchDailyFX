@@ -44,7 +44,7 @@ final class ArticleCellController {
         cell.date.text = formatter.string(from: viewModel.displayTimestamp)
         
         viewModel.onImageLoad = { [weak self] image in
-            self?.cell?.articleImage.setImageAnimated(image)
+            self?.cell?.articleImage?.setImageAnimated(image)
         }
         
         return cell

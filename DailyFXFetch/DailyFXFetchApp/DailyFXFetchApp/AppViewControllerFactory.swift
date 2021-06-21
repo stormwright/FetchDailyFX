@@ -4,8 +4,20 @@
 // Copyright © 2021 Mikayil M. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import DailyFXFetchEngine
 
-final class AppViewControllerFactory {
+final class AppViewControllerFactory: ArticlesViewControllerFactory {
     
+    private let httpClient: HTTPClient
+    
+    init(httpClient: HTTPClient) {
+        self.httpClient = httpClient
+    }
+    
+    
+    
+    func articleDetailView(_ article: Article) -> UIViewController {
+        return UIViewController()
+    }
 }
