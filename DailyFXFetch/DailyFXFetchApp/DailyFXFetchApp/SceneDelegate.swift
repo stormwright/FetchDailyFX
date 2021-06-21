@@ -51,7 +51,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func markets() -> UIViewController {
         let url = URL(string: "https://content.dailyfx.com/api/v1/markets")!
         let marketsLoader = RemoteMarketsLoader(url: url, client: httpClient)
-        let view = MarketsUIComposer.dashboardComposedWith(marketsLoader: marketsLoader)
+        let view = UINavigationController(
+            rootViewController: MarketsUIComposer.dashboardComposedWith(marketsLoader: marketsLoader))
         view.tabBarItem.title = "Markets"
         return view
     }
