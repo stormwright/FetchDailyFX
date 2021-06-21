@@ -7,8 +7,8 @@
 import Foundation
 
 struct RemoteAuthor: Codable {
-    let name: String
-    let title: String
-    let descriptionShort: String
+    let name: String?
+    let title: String?
+    let descriptionShort: String?
     let photo: String
 }

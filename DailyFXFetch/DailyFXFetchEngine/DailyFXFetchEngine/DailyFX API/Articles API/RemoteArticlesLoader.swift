@@ -49,7 +49,7 @@ public class RemoteArticlesLoader: ArticlesLoader {
 private extension Array where Element == RemoteArticle {
     func toModels() -> [Article] {
         return map {
-            Article(title: $0.title, description: $0.description, headlineImageUrl: URL(string: $0.headlineImageUrl), authors: $0.authors.toModels(), displayTimestamp: $0.displayTimestamp.date)
+            return Article(title: $0.title, description: $0.description, headlineImageUrl: URL(string: $0.headlineImageUrl ?? ""), authors: $0.authors.toModels(), displayTimestamp: $0.displayTimestamp.date)
         }
     }
 }

@@ -7,9 +7,9 @@
 import Foundation
 
 struct RemoteArticle: Codable {
-    let title: String
-    let description: String
-    let headlineImageUrl: String
+    let title: String?
+    let description: String?
+    let headlineImageUrl: String?
     let authors: [RemoteAuthor]
     let displayTimestamp: Int
 }
